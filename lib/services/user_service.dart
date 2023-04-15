@@ -25,7 +25,9 @@ class UserService {
       if (response.statusCode == 200) {
         print(response.body);
         final data = json.decode(response.body)["data"];
-        return UserModel.fromJson(data);
+        var userModel=UserModel.fromJson(data);
+        
+        return userModel;
       }
     } catch (e) {
       return null;
