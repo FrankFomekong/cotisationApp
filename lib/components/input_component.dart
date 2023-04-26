@@ -17,8 +17,6 @@ class CustomInput extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 10),
-      child: Flexible(
-        flex: flexVal,
         child: TextFormField(
           controller: controller,
           autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -45,8 +43,7 @@ class CustomInput extends StatelessWidget {
             }
             return null;
           },
-        ),
-      ),
+       ),
     );
   }
 }
@@ -65,7 +62,6 @@ class CustomDateInput extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 10),
-      child: Flexible(
                                           child: TextFormField(
                                             controller:
                                                 controller,
@@ -119,10 +115,9 @@ class CustomDateInput extends StatelessWidget {
                                               /// check if date isn't null
                                               if (pickedDate != null) {
                                                 // ignore: use_build_context_synchronously
-                                                controller.text= pickedDate.toString();
+                                                controller.text= pickedDate.toString().split(' ')[0];
                                               }
                                             },
-                                          ),
                                         ),
     );
   }

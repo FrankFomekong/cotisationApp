@@ -21,6 +21,7 @@
   "connection": "Connection",
   "cotisation": "Collectes",
   "cotisation_success": "You have registered a contribution",
+  "code":"code",
   "date": "Date",
   "date2":"Delivery Date",
   "empty_input": "Please complete this field",

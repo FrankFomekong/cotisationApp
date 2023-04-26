@@ -7,7 +7,7 @@ import 'package:gpt/screens/search_screen.dart';
 
 import '../models/user_model.dart';
 import '../utils/app_colors.dart';
-
+import 'photo_screen.dart';
 class MainScreen extends StatefulWidget {
   final UserModel userModel;
 
@@ -26,9 +26,9 @@ class _MainScreenState extends State<MainScreen> {
     List body = [
       CotisationScreen(userModel: widget.userModel),
       SearchScreen(userModel: widget.userModel),
-      ClientScreen(userModel: widget.userModel)
+      ClientScreen(userModel: widget.userModel),
+      PhotoScreen(userModel: widget.userModel)
     ];
-
     return Scaffold(
       body: SafeArea(
         child: body.elementAt(currentIndex),
@@ -59,7 +59,10 @@ class _MainScreenState extends State<MainScreen> {
               label: AppLocalizations.of(context)!.search),
           BottomNavigationBarItem(
               icon: const Icon(Icons.group),
-              label: AppLocalizations.of(context)!.client)
+              label: AppLocalizations.of(context)!.client),
+          BottomNavigationBarItem(
+              icon: const Icon(Icons.image),
+              label: AppLocalizations.of(context)!.photoclient)
         ],
       ),
     );

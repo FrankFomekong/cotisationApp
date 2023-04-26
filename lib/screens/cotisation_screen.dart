@@ -14,6 +14,9 @@ import '../models/user_model.dart';
 import '../utils/app_colors.dart';
 import 'authentication_screen.dart';
 
+//send data
+import 'package:http/http.dart' as http;
+
 // ignore: must_be_immutable
 class CotisationScreen extends StatelessWidget {
   final UserModel userModel;
